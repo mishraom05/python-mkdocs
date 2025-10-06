@@ -31,7 +31,7 @@ jobs:
       
       - name: Set git remote with PAT
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT_FG }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_CLASSIC }}
         run: git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/mishraom05/python-mkdocs.git
 
       - name: Deploy to GitHub Pages
