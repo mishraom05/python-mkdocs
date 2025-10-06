@@ -23,6 +23,13 @@ jobs:
 
       - name: Build MkDocs site
         run: mkdocs build --config-file project-doc/mkdocs.yml
-
+      
+      - name: Configure git
+        run: |
+                git config --global user.name "github-actions[bot]"
+                git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --config-file project-doc/mkdocs.yml --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --config-file project-doc/mkdocs.yml --force --remote-branch gh-pages
