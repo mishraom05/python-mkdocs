@@ -29,7 +29,10 @@ jobs:
                 git config --global user.name "github-actions[bot]"
                 git config --global user.email "github-actions[bot]@users.noreply.github.com"
       
-      - name: Deploy to GitHub Pages
+      - name: Set git remote with PAT
         env:
           GH_TOKEN: ${{ secrets.GH_PAT_FG }}
-        run: mkdocs gh-deploy --config-file project-doc/mkdocs.yml --force --remote-branch gh-pages --remote-name origin --remote-url https://x-access-token:${GH_TOKEN}@github.com/mishraom05/python-mkdocs.git
+        run: git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/mishraom05/python-mkdocs.git
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --config-file project-doc/mkdocs.yml --force --remote-branch gh-pages --remote-name origin
