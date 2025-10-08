@@ -2,6 +2,7 @@ site_name: Project Documentation
 nav:
   - Home: index.md
   - About: about.md
+  - Help: help.md
 theme: material
 extra:
   favicon: img/favicon.ico
