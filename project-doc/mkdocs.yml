@@ -3,6 +3,6 @@ nav:
   - Home: index.md
   - About: about.md
   - Help: help.md
-theme: material
+theme: mkdocs
 extra:
   favicon: img/favicon.ico
