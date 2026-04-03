@@ -5,7 +5,7 @@ nav:
   - Help: help.md
 theme: 
   name: mkdocs
-  logo: img/header.png        # small logo in header
+  logo: img/favicon.ico        # small logo in header
   favicon: img/favicon.ico
 #extra:
 #  favicon: img/favicon.ico
