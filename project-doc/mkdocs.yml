@@ -3,6 +3,9 @@ nav:
   - Home: index.md
   - About: about.md
   - Help: help.md
-theme: mkdocs
-extra:
-  favicon: img/favicon.ico
+theme: 
+  name: mkdocs
+  logo: images/header.png        # small logo in header
+  favicon: images/favicon.ico
+#extra:
+#  favicon: img/favicon.ico
